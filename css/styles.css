@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  /* Colors */
+  /* Primary */
+
+  --orange: hsl(25, 97%, 53%);
+
+  /* Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(214, 24%, 11%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --darkBlueBg: hsl(209, 26%, 17%);
+
+  --gradientBg: radial-gradient(
+    circle at top,
+    hsl(210, 23%, 17%),
+    hsl(214, 24%, 11%)
+  );
+
+  /* Font */
+
+  --ff: "Overpass", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  transition: .5rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--veryDarkBlue);
+}
+
+/* ==============
+  Global Styles
+============== */
+
+.contenedor {
+  width: min(90%, 120rem);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+/* ==============
+  Utilities
+============== */
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-border {
+  border: 0;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+/* ==============
+    Button Styles
+============== */
+
+.submit-button {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--orange);
+  border-radius: 5rem;
+  border: none;
+  letter-spacing: 0.3rem;
+  font-family: var(--ff);
+  margin: 1.5rem 0 0 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.submit-button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* ==============
+    Custom Styles
+============== */
+
+.main {
+  width: 85%;
+  background: var(--gradientBg);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  color: var(--white);
+}
+
+/* ==============
+    First State
+============== */
+
+.icon-container {
+  background-color: var(--darkBlueBg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  padding: 1.2rem;
+  border-radius: 4.5rem;
+  box-shadow: 0px 0px 1px 1px hsl(209, 26%, 17%);
+  cursor: pointer;
+}
+
+.content__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.content__text {
+  color: var(--mediumGrey);
+  line-height: 2.2rem;
+  margin-bottom: 2.2rem;
+}
+
+.rating {
+  width: 100%;
+}
+
+.rating-list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.rating-list__item {
+  list-style: none;
+  font-size: 1.5rem;
+  background-color: var(--darkBlueBg);
+  color: var(--mediumGrey);
+  padding: 1.4rem 1.3rem 1.3rem 1.3rem;
+  border-radius: 5rem;
+  width: 4.4rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.rating-list__item:hover {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.rating-list__item.selected {
+  color: var(--white);
+  background-color: var(--mediumGrey);
+}
+
+/* ==============
+    Second State
+============== */
+
+.second-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.second-state__rating {
+  color: var(--orange);
+  background-color: var(--darkBlueBg);
+  padding: 0.8rem 1.2rem;
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.second-state__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.second-state__text {
+  text-align: center;
+  color: var(--mediumGrey);
+}
+
+.hidden {
+  display: none;
+}
+
+.fa-circle-arrow-left {
+  position: absolute;
+  left: 0;
+  font-size: 2.9rem;
+  color: var(--orange);
+  transition: .5s;
+}
+
+.fa-circle-arrow-left:hover {
+  color: var(--white);
+}
+
+@media (min-width: 600px) {
+  .main {
+    width: 40rem;
+    height: 38rem;
+  }
+}
