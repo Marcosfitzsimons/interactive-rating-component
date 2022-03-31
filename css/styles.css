@@ -232,10 +232,12 @@ p {
   font-size: 2.9rem;
   color: var(--orange);
   transition: .5s;
+  opacity: .7;
 }
 
 .fa-circle-arrow-left:hover {
   color: var(--white);
+  opacity: 1;
 }
 
 @media (min-width: 600px) {
